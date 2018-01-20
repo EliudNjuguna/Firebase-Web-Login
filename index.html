@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Firebase Web Login</title>
+    <!--links-->
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+
+</head>
+<body>
+    
+    <div class="main-div" id="login_div">
+        <h3>Firebase Web Login</h3>
+        <input type="email" placeholder="Email..." id="email_field">
+        <input type="password" placeholder="Password..." id="password_field">
+        
+        <button onclick="login()" >Login to Account</button>
+    </div>
+    
+    <div class="loggedin-div" id="user_div">
+        <h3>Welcome User</h3>
+        <p>Welcome to Firebase Web Login Tutorial.You are currently logged in</p>
+        
+        <button onclick="logout()" >LogOut</button>
+    </div>
+    
+    
+        <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+        <script>
+          // Initialize Firebase
+          var config = {
+            apiKey: "AIzaSyBGiYqgyk-3pehw4-1E-9H8ThH3BVZ-gtM",
+            authDomain: "fir-weblogin.firebaseapp.com",
+            databaseURL: "https://fir-weblogin.firebaseio.com",
+            projectId: "fir-weblogin",
+            storageBucket: "",
+            messagingSenderId: "563230781048"
+          };
+          firebase.initializeApp(config);
+        </script>
+        <script src="js/main.js"></script>
+    
+</body>
+</html>
